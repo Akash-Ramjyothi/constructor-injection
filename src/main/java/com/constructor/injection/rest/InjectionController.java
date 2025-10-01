@@ -1,5 +1,6 @@
-package com.constructor.injection;
+package com.constructor.injection.rest;
 
+import com.constructor.injection.common.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.constructor.injection;
+package com.constructor.injection.common;
 
 import org.springframework.stereotype.Component;
 
