@@ -11,7 +11,7 @@ public class InjectionController {
     private Coach myCoach;
 
     @Autowired
-    public void setCoach(Coach theCoach) {
+    public InjectionController(Coach theCoach) {
         myCoach = theCoach;
     }
 
