@@ -12,7 +12,7 @@ public class InjectionController {
     private Coach myCoach;
 
     @Autowired
-    public InjectionController(@Qualifier("trackCoach") Coach theCoach) {
+    public InjectionController(Coach theCoach) {
         myCoach = theCoach;
     }
 
