@@ -12,7 +12,7 @@ public class InjectionController {
     private Coach myCoach;
 
     @Autowired
-    public InjectionController(@Qualifier("swimCoach") Coach theCoach) {
+    public InjectionController(@Qualifier("aquatic") Coach theCoach) {
         System.out.println("💉In Constructor: " + getClass().getSimpleName());
 
         myCoach = theCoach;
