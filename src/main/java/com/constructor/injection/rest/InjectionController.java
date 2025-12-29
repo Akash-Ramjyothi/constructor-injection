@@ -1,25 +1,43 @@
 package com.constructor.injection.rest;
 
 import com.constructor.injection.common.Coach;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+import java.util.Map;
+
 @RestController
+@RequestMapping("/api/v1")
 public class InjectionController {
 
-    private Coach myCoach;
+    private final Coach coach;
 
-    @Autowired
-    public InjectionController(@Qualifier("aquatic") Coach theCoach) {
-        System.out.println("💉In Constructor: " + getClass().getSimpleName());
-
-        myCoach = theCoach;
+    public InjectionController(@Qualifier("aquaticCoach") Coach coach) {
+        System.out.println("💉 Constructor Injection: " + getClass().getSimpleName());
+        this.coach = coach;
     }
 
-    @GetMapping("/dailyworkout")
-    public String getDailyWorkout() {
-        return myCoach.getDailyWorkout();
+    @GetMapping("/daily-workout")
+    public Map<String, Object> getDailyWorkout() {
+        return Map.of(
+                "timestamp", LocalDateTime.now(),
+                "workout", coach.getDailyWorkout(),
+                "coachType", coach.getClass().getSimpleName()
+        );
+    }
+
+    /**
+     * Simple diagnostic endpoint
+     */
+    @GetMapping("/health")
+    public Map<String, Object> health() {
+        return Map.of(
+                "status", "UP",
+                "checkedAt", LocalDateTime.now(),
+                "controller", getClass().getSimpleName()
+        );
     }
 }
