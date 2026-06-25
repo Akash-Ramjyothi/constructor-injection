@@ -1,10 +1,20 @@
-HELP.md
+# ============================
+# Maven
+# ============================
 target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
 
-### STS ###
+# ============================
+# IDE - STS / Eclipse
+# ============================
 .apt_generated
 .classpath
 .factorypath
@@ -12,14 +22,49 @@ target/
 .settings
 .springBeans
 .sts4-cache
+bin/
+**/*.class
+**/*.jar
+**/*.war
+**/*.ear
+*.log
+*.tmp
 
-### IntelliJ IDEA ###
-.idea
+# ============================
+# IDE - IntelliJ IDEA
+# ============================
+.idea/
 *.iws
 *.iml
 *.ipr
+out/
+.idea_modules/
+*.swp
+*.swo
+*~
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/contentModel.xml
+.idea/**/dataSources/
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+.idea/**/misc.xml
+.idea/**/modules.xml
+.idea/**/encodings.xml
+.idea/**/vcs.xml
+.idea/**/compiler.xml
+.idea/**/jarRepositories.xml
 
-### NetBeans ###
+# ============================
+# IDE - NetBeans
+# ============================
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -28,6 +73,510 @@ target/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
+nbactions.xml
+nb-configuration.xml
 
-### VS Code ###
+# ============================
+# IDE - VS Code
+# ============================
 .vscode/
+.vscode-test/
+*.code-workspace
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+*.vsix
+
+# ============================
+# IDE - Visual Studio
+# ============================
+.vs/
+*.user
+*.userosscache
+*.suo
+*.cache
+*.psess
+*.sln.docstates
+
+# ============================
+# OS Generated Files
+# ============================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.directory
+*.pid
+*.socket
+*.lock
+.cache/
+
+# ============================
+# Application Properties
+# ============================
+# Application specific
+application-local.properties
+application-dev.properties
+application-staging.properties
+application-*.local.properties
+*.secret.properties
+*.private.properties
+*.credentials.properties
+
+# Spring Boot
+spring-configuration-metadata.json
+META-INF/spring-configuration-metadata.json
+META-INF/additional-spring-configuration-metadata.json
+*.pid
+
+# ============================
+# Logs and Reports
+# ============================
+logs/
+*.log
+*.log.gz
+*.log.zip
+*.trace
+*.out
+*.dump
+*.hprof
+*.hs_err_pid*
+reports/
+test-output/
+coverage/
+target/surefire-reports/
+target/failsafe-reports/
+target/site/
+target/classes/
+target/test-classes/
+target/maven-archiver/
+target/maven-status/
+target/generated-sources/
+target/generated-test-sources/
+target/apidocs/
+target/antrun/
+target/cargo/
+target/docker/
+target/liberty/
+target/tomee/
+.liberty/
+dependency-reduced-pom.xml
+
+# ============================
+# Database
+# ============================
+*.db
+*.sqlite
+*.sqlite3
+*.h2.db
+*.mv.db
+*.trace.db
+*.lck
+*.lock.mv.db
+*.lock.trace.db
+hsqldb/
+derby.log
+derby/
+*.ldb
+*.log
+
+# ============================
+# Docker
+# ============================
+docker-compose.override.yml
+docker-compose.*.yml
+.dockerignore
+Dockerfile.*.local
+*.tar
+*.tar.gz
+*.docker
+docker.sock
+.containerenv
+.dockerenv
+docker/
+*.container
+
+# ============================
+# Kubernetes
+# ============================
+*.secret.yaml
+*.secret.yml
+kubeconfig
+.kube/
+helm/secrets/
+charts/*/secrets.yaml
+charts/*/secrets.yml
+secrets/
+*.enc.yaml
+*.enc.yml
+
+# ============================
+# Node / JavaScript
+# ============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.eslintcache
+*.tsbuildinfo
+.vercel
+.netlify
+.next/
+out/
+dist/
+build/
+*.min.js
+*.min.css
+
+# ============================
+# Python
+# ============================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.venv
+venv/
+ENV/
+env/
+*.egg-info/
+dist/
+build/
+*.whl
+*.egg
+.python-version
+*.pyc
+
+# ============================
+# Ruby
+# ============================
+*.gem
+*.rbc
+.bundle/
+Gemfile.lock
+vendor/bundle/
+vendor/ruby/
+.ruby-version
+.ruby-gemset
+*.lock
+
+# ============================
+# Go
+# ============================
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.sum
+vendor/
+coverage.txt
+profile.cov
+bin/
+pkg/
+
+# ============================
+# Terraform
+# ============================
+*.tfstate
+*.tfstate.*
+.terraform/
+.terragrunt-cache/
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+crash.log
+crash.*.log
+
+# ============================
+# Secret Management
+# ============================
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.key
+*.p8
+*.jks
+*.keystore
+*.truststore
+.secrets/
+.credentials/
+secret/
+secrets.yml
+*.secret
+.env
+.env.*
+!.env.example
+!.env.template
+*.decrypted
+*.encrypted
+vault.token
+.vault-token
+
+# ============================
+# CI/CD
+# ============================
+.jenkins/
+.gitlab/
+.github/workflows/*.local.yml
+.azure/
+.travis.yml.local
+circle.yml.local
+drone.yml.local
+gitlab-ci.yml.local
+bitbucket-pipelines.yml.local
+.teamcity/
+.woodpecker/
+
+# ============================
+# Temporary Files
+# ============================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+*.bak
+*.backup
+*.orig
+*.rej
+*.patch
+*.diff
+*.merge
+*.old
+*.new
+*.save
+*.dump
+*.coredump
+*.core
+*.pid
+*.lock
+*.sem
+*.stamp
+*.timestamp
+
+# ============================
+# Archives and Packages
+# ============================
+*.zip
+*.tar
+*.gz
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.iso
+*.img
+*.dmg
+*.pkg
+*.deb
+*.rpm
+*.msi
+*.exe
+
+# ============================
+# Backup Editors
+# ============================
+.#*
+\#*#
+*.sw?
+*~.nib
+*.rej
+*.orig
+*.bak
+*.old
+
+# ============================
+# Remote Development
+# ============================
+.remote-sync.json
+.remote-sync/
+.terraform/
+.terragrunt-cache/
+.ansible/
+.vagrant/
+Vagrantfile.local
+
+# ============================
+# JetBrains / Toolbox
+# ============================
+.idea/caches/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/shelf/
+.idea/dbnavigator.xml
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/gradle.xml
+.idea/libraries/
+.idea/vcs.xml
+.idea/compiler.xml
+.idea/jarRepositories.xml
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+
+# ============================
+# SonarQube / SonarCloud
+# ============================
+.sonar/
+sonar-project.properties.local
+sonar-scanner.properties.local
+.scannerwork/
+.sonarqube/
+
+# ============================
+# Gradle
+# ============================
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradlew
+gradlew.bat
+.gradle/
+build/
+gradle.properties.local
+*.gradle.local
+gradle/wrapper/gradle-wrapper.properties.local
+
+# ============================
+# Frontend Build Tools
+# ============================
+# Webpack
+webpack.config.js.local
+webpack.*.config.js.local
+
+# Gulp
+gulpfile.js.local
+
+# Grunt
+gruntfile.js.local
+
+# Bower
+bower_components/
+bower.json.local
+
+# ============================
+# Mobile Development
+# ============================
+# Android
+*.apk
+*.ap_
+*.dex
+*.class
+gen/
+bin/
+gradle/
+local.properties
+proguard/
+keystore/
+.android/
+.androidstudio/
+
+# iOS
+*.xccheckout
+*.xcuserstate
+*.xcuserdatad
+*.xcworkspace
+*.xcshareddata
+*.xcscmblueprint
+*.xcscheme
+*.xctest
+*.xctestrun
+*.xcappdata
+*.xcdatamodeld
+*.xcdatamodel
+*.mode1v3
+*.mode2v3
+*.pbxuser
+*.perspectivev3
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+xcuserdata/
+DerivedData/
+build/
+*.moved-aside
+*.xcuserstate
+*.xcuserdatad
+*.xcworkspace
+*.xcshareddata
+*.xcscmblueprint
+*.xcscheme
+*.xctest
+*.xctestrun
+*.xcappdata
+*.xcdatamodeld
+*.xcdatamodel
+*.mode1v3
+*.mode2v3
+*.pbxuser
+*.perspectivev3
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# ============================
+# Custom Application Specific
+# ============================
+# Add your application-specific ignores here
+# Example:
+# uploads/
+# temp/
+# data/
+# *.generated.java
+# *.generated.xml
